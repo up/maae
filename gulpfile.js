@@ -8,7 +8,7 @@ var
   csso = require('gulp-csso'),
   requireConfig,
   outDirJS,
-	outDirCSS
+  outDirCSS
 ;
 
 outDirJS = 'public/assets/javascripts';
@@ -66,15 +66,15 @@ gulp.task(
 );
 
 gulp.task(
-	'Copy index', 
-	function() {
+  'Copy index', 
+  function() {
     return gulp.src('src/index.html')
       .pipe(gulp.dest('./public'));
 });
 
 gulp.task(
-	'Copy data directory', 
-	function() {
+  'Copy data directory', 
+  function() {
     return gulp.src('data/*.json')
       .pipe(gulp.dest('./public/data'));
 });
@@ -85,6 +85,6 @@ gulp.task('default', [
   'Concat libraries', 
   'Compress scripts',
   'Compress stylesheets',
-	'Copy index',
-	'Copy data directory'
+  'Copy index',
+  'Copy data directory'
 ]);
