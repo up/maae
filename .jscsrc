@@ -1,0 +1,47 @@
+// https://www.npmjs.org/package/jscs
+
+{
+	"disallowSpacesInsideObjectBrackets": true,
+	
+	//"requireSpaceBeforeBlockStatements": true,
+	
+	//"requireSpacesInFunctionExpression": {
+	//  "beforeOpeningRoundBrace": true,
+	//  "beforeOpeningCurlyBrace": true
+	//},
+  
+  "requireParenthesesAroundIIFE": true,
+	
+	"requireSpacesInConditionalExpression": {
+    "afterTest": true,
+    "beforeConsequent": true,
+    "afterConsequent": true,
+    "beforeAlternate": true
+  },
+
+	"requireCurlyBraces": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "try",
+    "catch",
+    "case",
+    "default"
+  ],
+
+  "requireSpaceAfterKeywords": [
+    "if",
+    "else",
+    "for",
+    "while",
+    "do",
+    "switch",
+    "return",
+    "try",
+    "catch"
+  ]
+  
+  
+}

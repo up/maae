@@ -1,6 +1,7 @@
 var 
   gulp = require('gulp'),
   jshint = require('gulp-jshint'),
+	jscs = require('gulp-jscs'),
   amdOptimize = require('gulp-amd-optimizer'),
   //concatSourcemap = require('gulp-concat-sourcemap'),
   uglify = require('gulp-uglify'),
@@ -21,6 +22,13 @@ gulp.task( 'Lint scripts',
     return gulp.src(['src/js/**/*.js', 'libs/*.js', 'gulpfile.js'])
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('jshint-stylish'));
+  }
+);
+
+gulp.task( 'Check code style', 
+  function () {
+    return gulp.src('src/js/**/*.js')
+        .pipe(jscs());
   }
 );
 
@@ -80,6 +88,7 @@ gulp.task(
 
 gulp.task('default', [
   'Lint scripts',
+	'Check code style',
   'Concat script modules', 
   'Concat script libraries', 
   'Compress script module and libraries',

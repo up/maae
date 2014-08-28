@@ -15,6 +15,7 @@ HTML5 Editor Basics
 * gulp-concat
 * gulp-concat-sourcemap
 * gulp-csso
+* gulp-jscs
 * gulp-jshint
 * jshint-stylish
 * gulp-uglify
