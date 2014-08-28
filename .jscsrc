@@ -1,4 +1,7 @@
-// https://www.npmjs.org/package/jscs
+/** 
+  * JavaScript Code Style
+  * https://www.npmjs.org/package/jscs
+*/
 
 {
   "disallowSpacesInsideObjectBrackets": true,
@@ -42,6 +45,5 @@
     "try",
     "catch"
   ]
-  
   
 }
