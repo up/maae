@@ -28,7 +28,7 @@ gulp.task( 'Lint scripts',
 gulp.task( 'Check code style', 
   function () {
     return gulp.src('src/js/**/*.js')
-        .pipe(jscs());
+      .pipe(jscs());
   }
 );
 
@@ -78,8 +78,7 @@ gulp.task( 'Copy index.html',
   }
 );
 
-gulp.task(
-  'Copy data directory', 
+gulp.task( 'Copy data directory', 
   function() {
     return gulp.src('data/*.json')
       .pipe(gulp.dest('./public/data'));
@@ -88,7 +87,7 @@ gulp.task(
 
 gulp.task('default', [
   'Lint scripts',
-	'Check code style',
+  'Check code style',
   'Concat script modules', 
   'Concat script libraries', 
   'Compress script module and libraries',
