@@ -5,16 +5,13 @@ var
   //concatSourcemap = require('gulp-concat-sourcemap'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
-  csso = require('gulp-csso'),
-  requireConfig,
-  outDirJS,
-  outDirCSS
+  csso = require('gulp-csso')
 ;
 
-outDirJS = 'public/assets/javascripts';
-outDirCSS = 'public/assets/stylesheets';
+var outDirJS = 'public/assets/javascripts';
+var outDirCSS = 'public/assets/stylesheets';
 
-requireConfig = {
+var requireConfig = {
   baseUrl: __dirname
 };
 
