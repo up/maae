@@ -11,9 +11,4 @@ node_modules
 # Build output
 public
 
-# external data
-
 # tests
-
-# Gulp
-# gulpfile.js
