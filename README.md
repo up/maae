@@ -2,7 +2,7 @@
 ## HTML5 Editor Basics
 
 
-### AMD Loader (client): amdlite.js
+### AMD Loader (client library): amdlite.js
 [https://github.com/abadc0de/amdlite](https://github.com/abadc0de/amdlite)
 
 ### AMD Optimizer (build tool): gulp-amd-optimize
