@@ -1,0 +1,165 @@
+[
+  {
+    "value" : "Cut",
+    "id"   : "cut"
+  },
+  {
+    "value" : "Copy",
+    "id"   : "copy"
+  },
+  {
+    "value" : "Paste",
+    "id"   : "paste"
+  },
+  {
+    "value" : "Bold",
+    "id"   : "bold"
+  },
+  {
+    "value" : "Italic",
+    "id"   : "italic"
+  },
+  {
+    "value" : "Underline",
+    "id"   : "underline"
+  },
+  {
+    "value" : "<s>",
+    "id"   : "strikethrough"
+  },
+  {
+    "value" : "<a>",
+    "id" : "createLink",
+    "cmd" : "promptUser",
+    "prompt" : "URL of link?"
+  },
+  {
+    "value" : "<hr />",
+    "id" : "inserthorizontalrule"
+  },
+  {
+    "value" : "<img />",
+    "id" : "insertimage",
+    "cmd" : "/pix/logo_ppk.gif"
+  },
+  {
+    "value" : "Undo",
+    "id" : "undo"
+  },
+  {
+    "value" : "Redo",
+    "id" : "redo"
+  },
+  {
+    "value" : "bgcolor",
+    "id" : "backcolor",
+    "cmd" : "promptUser",
+    "prompt" : "color?"
+  },
+  {
+    "value" : "fgcolor",
+    "id" : "forecolor",
+    "cmd" : "promptUser",
+    "prompt" : "color?"
+  },
+  {
+    "value" : "hilite",
+    "id" : "hilitecolor",
+    "cmd" : "promptUser",
+    "prompt" : "color?"
+  },
+  {
+    "value" : "A+",
+    "id" : "increasefontsize"
+  },
+  {
+    "value" : "A-",
+    "id" : "decreasefontsize"
+  },
+  {
+    "value" : "font-family",
+    "id" : "fontvalue",
+    "cmd" : "promptUser",
+    "prompt" : "font value?"
+  },
+  {
+    "value" : "font-size",
+    "id" : "FontSize",
+    "cmd" : "promptUser",
+    "prompt" : "font size?"
+  },
+  {
+    "value" : "<sub>",
+    "id" : "subscript"
+  },
+  {
+    "value" : "<sup>",
+    "id" : "superscript"
+  },
+  {
+    "value" : "left",
+    "id" : "justifyleft"
+  },
+  {
+    "value" : "right",
+    "id" : "justifyright"
+  },
+  {
+    "value" : "center",
+    "id" : "justifycenter"
+  },
+  {
+    "value" : "justify",
+    "id" : "justifyfull"
+  },
+  {
+    "value" : "<ol>",
+    "id" : "insertorderedlist"
+  },
+  {
+    "value" : "<ul>",
+    "id" : "insertunorderedlist"
+  },
+  {
+    "value" : "<p>",
+    "id" : "insertparagraph"
+  },
+  {
+    "value" : "html",
+    "id" : "inserthtml",
+    "cmd" : "promptUser",
+    "prompt" : "Valid HTML snippet"
+  },
+  {
+    "value" : "formatblock",
+    "id" : "formatblock",
+    "cmd" : "promptUser",
+    "prompt" : "Which block? (Header or paragraph)"
+  },
+  {
+    "value" : "heading",
+    "id" : "heading",
+    "cmd" : "promptUser",
+    "prompt" : "Which header?"
+  },
+  {
+    "value" : "indent",
+    "id" : "indent"
+  },
+  {
+    "value" : "outdent",
+    "id" : "outdent"
+  },
+  {
+    "value" : "readonly",
+    "id" : "contentreadonly"
+  },
+  {
+    "value" : "del",
+    "id" : "delete"
+  },
+  {
+    "value" : "unlink",
+    "id" : "unlink"
+  }
+]
