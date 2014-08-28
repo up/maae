@@ -40,7 +40,7 @@
   {
     "value" : "<img />",
     "id" : "insertimage",
-    "cmd" : "/pix/logo_ppk.gif"
+    "cmd" : "/assets/images/dummy.png"
   },
   {
     "value" : "Undo",
