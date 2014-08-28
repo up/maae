@@ -1,9 +1,11 @@
 var 
+  pkg = require('./package.json'),
   gulp = require('gulp'),
   jshint = require('gulp-jshint'),
   jscs = require('gulp-jscs'),
   amdOptimize = require('gulp-amd-optimizer'),
   //concatSourcemap = require('gulp-concat-sourcemap'),
+  header = require('gulp-header'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
   csso = require('gulp-csso')
@@ -16,6 +18,15 @@ var requireConfig = {
   baseUrl: __dirname
 };
 
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @repository <%= pkg.homepage %>',
+  ' * @author <%= pkg.author %>',
+  ' * @license <%= pkg.license %>',
+  ' * @build <%= new Date().toLocaleString() %>',
+  ' */',
+  ''].join('\n');
 
 gulp.task( 'Lint scripts', 
   function () {
@@ -58,6 +69,7 @@ gulp.task( 'Compress script module and libraries',
     return gulp.src([outDirJS + '/libs.js', outDirJS + '/modules.js'])
       .pipe(uglify())
       .pipe(concat('all.min.js'))
+	  .pipe(header(banner, { pkg : pkg } ))
       .pipe(gulp.dest(outDirJS));
   }
 );

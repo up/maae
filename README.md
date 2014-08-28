@@ -19,6 +19,7 @@ HTML5 Editor Basics
 * gulp-jshint
 * jshint-stylish
 * gulp-uglify
+* gulp-header
 * node-static
 
 ---
