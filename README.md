@@ -1,5 +1,5 @@
 # Minimalistic AMD API Example
-## HTML5 Editor Basics
+HTML5 Editor Basics
 
 
 ### AMD Loader (client library): amdlite.js
