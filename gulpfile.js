@@ -1,7 +1,7 @@
 var 
   gulp = require('gulp'),
   jshint = require('gulp-jshint'),
-	jscs = require('gulp-jscs'),
+  jscs = require('gulp-jscs'),
   amdOptimize = require('gulp-amd-optimizer'),
   //concatSourcemap = require('gulp-concat-sourcemap'),
   uglify = require('gulp-uglify'),
