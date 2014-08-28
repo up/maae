@@ -18,7 +18,8 @@ var requireConfig = {
   baseUrl: __dirname
 };
 
-var banner = ['/**',
+var banner = [
+  '/**',
   ' * <%= pkg.name %> - <%= pkg.description %>',
   ' * @version v<%= pkg.version %>',
   ' * @repository <%= pkg.homepage %>',
@@ -26,7 +27,8 @@ var banner = ['/**',
   ' * @license <%= pkg.license %>',
   ' * @build <%= new Date().toLocaleString() %>',
   ' */',
-  ''].join('\n');
+  ''
+].join('\n');
 
 gulp.task( 'Lint scripts', 
   function () {
@@ -69,7 +71,7 @@ gulp.task( 'Compress script module and libraries',
     return gulp.src([outDirJS + '/libs.js', outDirJS + '/modules.js'])
       .pipe(uglify())
       .pipe(concat('all.min.js'))
-	  .pipe(header(banner, { pkg : pkg } ))
+      .pipe(header(banner, { pkg : pkg } ))
       .pipe(gulp.dest(outDirJS));
   }
 );
