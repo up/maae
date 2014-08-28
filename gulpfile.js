@@ -16,14 +16,15 @@ var requireConfig = {
 };
 
 
-gulp.task('Lint scripts', function () {
+gulp.task( 'Lint scripts', 
+  function () {
     return gulp.src(['src/js/**/*.js', 'libs/*.js', 'gulpfile.js'])
       .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('jshint-stylish'));
-});
+  }
+);
 
-gulp.task(
-  'Concat modules', 
+gulp.task( 'Concat modules', 
   function () {
     return gulp.src('src/js/*.js')
       .pipe(amdOptimize(requireConfig, { umd: false }))
@@ -32,8 +33,7 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'Concat libraries', 
+gulp.task( 'Concat libraries', 
   function () {
     return gulp.src('libs/*.js')
       .pipe(concat('libs.js'))
@@ -41,9 +41,11 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'Compress scripts', 
-  ['Concat modules', 'Concat libraries'], 
+gulp.task( 'Compress scripts', 
+  [
+    'Concat modules', 
+    'Concat libraries'
+  ], 
   function() {
     return gulp.src([outDirJS + '/libs.js', outDirJS + '/modules.js'])
       .pipe(uglify())
@@ -52,8 +54,7 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'Compress stylesheets', 
+gulp.task( 'Compress stylesheets', 
   function() {
     return gulp.src('src/css/*.css')
       .pipe(concat('all.min.css', {newLine: '\r\n'}))
@@ -62,19 +63,20 @@ gulp.task(
   }
 );
 
-gulp.task(
-  'Copy index', 
+gulp.task( 'Copy index.html', 
   function() {
     return gulp.src('src/index.html')
       .pipe(gulp.dest('./public'));
-});
+  }
+);
 
 gulp.task(
   'Copy data directory', 
   function() {
     return gulp.src('data/*.json')
       .pipe(gulp.dest('./public/data'));
-});
+  }
+);
 
 gulp.task('default', [
   'Lint scripts',
@@ -82,6 +84,6 @@ gulp.task('default', [
   'Concat libraries', 
   'Compress scripts',
   'Compress stylesheets',
-  'Copy index',
+  'Copy index.html',
   'Copy data directory'
 ]);
