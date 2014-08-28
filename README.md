@@ -41,4 +41,4 @@ __Output directory__: *'public'*
 ### TODO
 
 * Add gulp watch task (a little bit tricky
-
+* Add tests and coverage tool

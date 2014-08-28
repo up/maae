@@ -24,7 +24,7 @@ gulp.task( 'Lint scripts',
   }
 );
 
-gulp.task( 'Concat modules', 
+gulp.task( 'Concat script modules', 
   function () {
     return gulp.src('src/js/*.js')
       .pipe(amdOptimize(requireConfig, { umd: false }))
@@ -33,7 +33,7 @@ gulp.task( 'Concat modules',
   }
 );
 
-gulp.task( 'Concat libraries', 
+gulp.task( 'Concat script libraries', 
   function () {
     return gulp.src('libs/*.js')
       .pipe(concat('libs.js'))
@@ -41,10 +41,10 @@ gulp.task( 'Concat libraries',
   }
 );
 
-gulp.task( 'Compress scripts', 
+gulp.task( 'Compress script module and libraries', 
   [
-    'Concat modules', 
-    'Concat libraries'
+    'Concat script modules', 
+    'Concat script libraries'
   ], 
   function() {
     return gulp.src([outDirJS + '/libs.js', outDirJS + '/modules.js'])
@@ -54,7 +54,7 @@ gulp.task( 'Compress scripts',
   }
 );
 
-gulp.task( 'Compress stylesheets', 
+gulp.task( 'Compress all stylesheets', 
   function() {
     return gulp.src('src/css/*.css')
       .pipe(concat('all.min.css', {newLine: '\r\n'}))
@@ -80,10 +80,10 @@ gulp.task(
 
 gulp.task('default', [
   'Lint scripts',
-  'Concat modules', 
-  'Concat libraries', 
-  'Compress scripts',
-  'Compress stylesheets',
+  'Concat script modules', 
+  'Concat script libraries', 
+  'Compress script module and libraries',
+  'Compress all stylesheets',
   'Copy index.html',
   'Copy data directory'
 ]);
